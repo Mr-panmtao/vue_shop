@@ -2,5 +2,20 @@ html,body,#app{
     height: 100%;
     margin: 0;
     padding: 0;
-    
+}
+
+.el-card {
+    box-sizing: 1px 1px 1px #ddd !important;
+}
+
+.el-breadcrumb {
+    margin-bottom: 20px;
+}
+
+.el-table {
+    margin-top: 20px;
+}
+
+.el-pagination {
+    margin-top: 20px;
 }
