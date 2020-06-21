@@ -9,7 +9,9 @@ import Welcome from '@/components/Welcome'
 // 用户列表组件
 import User from '@/components/User/User'
 // 角色列表组件
-import Roles from '@/components/Roles/Roles'
+import Role from '@/components/power/Role'
+// 权限列表组件
+import Rights from '@/components/power/Rights'
 
 // 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
 const originalPush = Router.prototype.push
@@ -30,7 +32,8 @@ const router = new Router({
       children: [
         { path: '/welcome', component: Welcome },
         { path: '/users', component: User },
-        { path: '/roles', component: Roles }
+        { path: '/rights', component: Rights },
+        { path: '/roles', component: Role }
       ]
     }
   ]

@@ -8,11 +8,11 @@
       <!-- 表单 -->
       <el-form ref="loginref" :model="loginform" :rules="loginrules" label-width="0px" class="login-form">
         <el-form-item prop="username">
-          <el-input v-model="loginform.username" prefix-icon="el-icon-user"></el-input>
+          <el-input v-model="loginform.username" placeholder="请输入用户名" prefix-icon="el-icon-user"></el-input>
         </el-form-item>
 
         <el-form-item prop="password">
-          <el-input type="password" v-model="loginform.password" prefix-icon="el-icon-unlock"></el-input>
+          <el-input type="password" v-model="loginform.password" placeholder="请输入密码" prefix-icon="el-icon-unlock"></el-input>
         </el-form-item>
 
         <el-form-item class="login-btn">
