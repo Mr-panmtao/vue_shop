@@ -80,7 +80,6 @@ export default {
     },
     // 控制侧边栏某一项高亮
     isChecked (activePath) {
-      console.log(activePath)
       sessionStorage.setItem('activePath', activePath)
       this.isChcked = activePath
     }
