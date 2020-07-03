@@ -30,8 +30,8 @@ export default {
     return {
       // 表单数据绑定
       loginform: {
-        username: '',
-        password: ''
+        username: 'admin',
+        password: '123456'
       },
       // 表单验证
       loginrules: {

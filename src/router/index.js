@@ -14,6 +14,8 @@ import Role from '@/components/power/Role'
 import Rights from '@/components/power/Rights'
 // 商品分类组件
 import GoodsCate from '@/components/goods/Goods_cate'
+// 分类参数组件
+import GoodsParams from '@/components/goods/Goods_params'
 
 // 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
 const originalPush = Router.prototype.push
@@ -36,7 +38,8 @@ const router = new Router({
         { path: '/users', component: User },
         { path: '/rights', component: Rights },
         { path: '/roles', component: Role },
-        { path: '/categories', component: GoodsCate }
+        { path: '/categories', component: GoodsCate },
+        { path: '/params', component: GoodsParams }
       ]
     }
   ]
