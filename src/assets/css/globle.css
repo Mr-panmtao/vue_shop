@@ -20,3 +20,7 @@ html,body,#app{
 .el-pagination {
     margin-top: 20px;
 }
+
+.ql-editor {
+    min-height: 130px;
+}
