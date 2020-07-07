@@ -22,6 +22,8 @@ import GoodsList from '@/components/goods/Goods_list'
 import GoodsAddgoods from '@/components/goods/Goods_addgoods'
 // 订单列表组件
 import Order from '@/components/order/order'
+// 数据报表组件
+import Report from '@/components/report/report'
 
 // 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
 const originalPush = Router.prototype.push
@@ -48,7 +50,8 @@ const router = new Router({
         { path: '/params', component: GoodsParams },
         { path: '/goods', component: GoodsList },
         { path: '/goods/addgoods', component: GoodsAddgoods },
-        { path: '/orders', component: Order }
+        { path: '/orders', component: Order },
+        { path: '/reports', component: Report }
       ]
     }
   ]
