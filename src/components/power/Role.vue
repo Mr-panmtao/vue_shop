@@ -12,8 +12,8 @@
       <el-button type="primary" @click="showAddDialogVisible">添加角色</el-button>
 
       <!-- 表格数据 -->
-      <el-table :data="RightsList" border stripe>
-        <el-table-column label="修改" type="expand" width="100px">
+      <el-table :data="RightsList" border stripe row-key="id">
+        <el-table-column label="修改" type="expand" width="100px" >
             <template slot-scope="scope">
                  <el-row class="align-center" :class="['bor-bottom', in1 === 0 ? 'bor-top':'']" v-for="(item1,in1) in scope.row.children" :key="item1.id" >
                     <!-- 一级权限 -->

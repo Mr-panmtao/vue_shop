@@ -6,10 +6,13 @@ import './plugins/element.js'
 import './main.css'
 // 导入全局样式
 import './assets/css/globle.css'
+
 // 导入axios
 import axios from 'axios'
+
 // 第三方表格组件
 import ZkTable from 'vue-table-with-tree-grid'
+
 // 第三方富文本编辑器组件
 import VueQuillEditor from 'vue-quill-editor'
 // 样式
@@ -17,11 +20,25 @@ import 'quill/dist/quill.core.css' // import styles
 import 'quill/dist/quill.snow.css' // for snow theme
 import 'quill/dist/quill.bubble.css' // for bubble theme
 
+// 导入 nprogress 进度条组件的js和css
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
+// 配置请求的根路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+
 // axios请求拦截
 axios.interceptors.request.use(config => {
+  // 每次发起请求都展示进度条
+  NProgress.start()
   // 为请求头对象 添加 token 验证的 Authorization 字段
   config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
+
+axios.interceptors.response.use(config => {
+  // 隐藏进度条
+  NProgress.done()
   return config
 })
 Vue.prototype.$http = axios
